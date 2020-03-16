@@ -93,11 +93,12 @@ const fakeAPICall = i => {
     }
   });
 };
-//fakePeople[0], //fakePeople[1], //fakePeople[2]
+
 function getAllData() {
-  Promise.all([fakeAPICall(0), fakeAPICall(1), fakeAPICall(2)]).then(result =>
-    console.log(result)
-  );
+  Promise.all(fakePeople).then(result => console.log(result));
 }
+// Promise.all([fakeAPICall(0), fakeAPICall(1), fakeAPICall(2)]).then(result =>
+//   console.log(result)
+// );
 
 getAllData();
